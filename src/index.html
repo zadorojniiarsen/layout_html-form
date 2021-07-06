@@ -1,17 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    >
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Form</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <h1>HTML Form</h1>
-    <script type="text/javascript" src="./main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>HTML Form</h1>
+  <script type="text/javascript" src="./main.js"></script>
+  <main>
+    Personal information
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+      <div class="form__field">
+        <ul class="field__list">
+          <li class="list__item">Surname: <input type="text" name="surname"></li>
+          <li class="list__item">Name: <input type="text" name="name"></li>
+          <li class="list__item">How old are You? 
+            <input 
+              type="number" 
+              default="12" 
+              min="1" 
+              max="100"
+            ></li>
+          <li class="list__item">Full date of birth: <input type="date" name="birth_date"></li>
+          <li class="list__item">I accept the term of the agreement <input type="checkbox" name="terms"></li>
+        </ul>
+      </div>
+
+      Registration
+      <div class="form__field">
+        <ul class="field__list">
+          <li class="list__item">
+            <label for="">E-mail: 
+              <input 
+                type="email" 
+                placeholder="email@example.com"
+                name="email">
+              </label></li>
+          <li class="list__item">
+            <label for="">Password: 
+              <input type="password" name="password"></label></li>
+        </ul>
+      </div>
+
+      An interesting fact about you!
+      <div class="form__field">
+        Do you love cars? <input type="radio" name="love_cars">
+        What is your favorite color? <input type="color">
+        What time do you go to bed? <input type="time">
+        What are your favorite brand of cars? <input type="text">
+        How do you rate our work? <input type="range" min="0" max="100">
+      </div>
+      Addictional info:
+      <div class="form__field">
+        Comments: <textarea name="" cols="20" rows="5"></textarea>
+        Would you recommend us?
+        <select name="recommend">
+          <option value="no">no</option>
+          <option value="yes">yes</option>
+        </select>
+      </div>
+    </form>
+    <button>Submit</button>
+  </main>
+</body>
+
 </html>
